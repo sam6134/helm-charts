@@ -37,6 +37,8 @@ spec:
     value: /usr/local/bin:/usr/bin:/bin:/opt/aws/neuron/bin
   - name: GOMEMLIMIT
     value: 160MiB
+  - name: GODEBUG
+    value: gctrace=1
   ports:
   - name: "metrics"
     port: {{ .Values.neuronMonitor.service.port }}
